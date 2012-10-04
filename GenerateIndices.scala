@@ -1,7 +1,7 @@
 import java.io._
 import scala.xml._
 
-object GenerateIndeces extends Application {
+object GenerateIndices extends Application {
   val root = new File("repo")
   recurse(root)
 
