@@ -17,8 +17,10 @@ object GenerateIndices extends Application {
   def generateIndex(dir: File) = {
     val dirs = dir.listFiles.filter(_.isDirectory).map(_.getName + "/").toList.sorted
     val files = dir.listFiles.filter(f => f.isFile && f.getName != "index.html").map(_.getName).toList.sorted
+    // Using an embedded stylesheet in an XML literal, a double curly brace
+    // "{{" or "}}" is the escape pattern mojo to actually get a curly brace.
     <html>
-    <head><style type="text/css">body{font-family:sans-serif;font-size:20px;color:#B78E68;}h1{font-size:30px;}ul{list-style:none;padding-left:20px;}a:visited{color:blue;}</style></head>
+    <head><style type="text/css">body{{font-family:sans-serif;font-size:20px;color:#B78E68;}}h1{{font-size:30px;}}ul{{list-style:none;padding-left:20px;}}a:visited{{color:blue;}}</style></head>
     <body>
       <h1>{ path(dir) }</h1>
       <ul>
