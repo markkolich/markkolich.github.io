@@ -2,7 +2,7 @@ import java.io._
 import scala.xml._
 
 object GenerateIndices extends Application {
-  val root = new File("repo")
+  val root = new File("../repo")
   recurse(root)
 
   def recurse(file: File): Unit = {
@@ -18,7 +18,7 @@ object GenerateIndices extends Application {
     val dirs = dir.listFiles.filter(_.isDirectory).map(_.getName + "/").toList.sorted
     val files = dir.listFiles.filter(f => f.isFile && f.getName != "index.html").map(_.getName).toList.sorted
     <html>
-    <head><link type="text/css" href={rootLink(dir) + "/css/repo.css"} rel="stylesheet" /></head>
+    <head><style type="text/css">body{font-family:sans-serif;font-size:20px;color:#B78E68;}h1{font-size:30px;}ul{list-style:none;padding-left:20px;}a:visited{color:blue;}</style></head>
     <body>
       <h1>{ path(dir) }</h1>
       <ul>
