@@ -5,7 +5,7 @@
     <artifactId>kolich-httpclient4-closure</artifactId>
     <packaging>jar</packaging>
     <description>kolich-httpclient4-closure</description>
-    <version>0.0.3</version>
+    <version>0.0.7</version>
     <name>kolich-httpclient4-closure</name>
     <organization>
         <name>com.kolich</name>
