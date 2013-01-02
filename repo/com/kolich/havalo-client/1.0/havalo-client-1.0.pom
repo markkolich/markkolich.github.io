@@ -5,7 +5,7 @@
     <artifactId>havalo-client</artifactId>
     <packaging>jar</packaging>
     <description>havalo-client</description>
-    <version>0.0.8</version>
+    <version>1.0</version>
     <name>havalo-client</name>
     <organization>
         <name>com.kolich</name>
