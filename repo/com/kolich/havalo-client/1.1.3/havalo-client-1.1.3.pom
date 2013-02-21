@@ -5,7 +5,7 @@
     <artifactId>havalo-client</artifactId>
     <packaging>jar</packaging>
     <description>havalo-client</description>
-    <version>1.0</version>
+    <version>1.1.3</version>
     <name>havalo-client</name>
     <organization>
         <name>com.kolich</name>
@@ -14,12 +14,7 @@
         <dependency>
             <groupId>com.kolich</groupId>
             <artifactId>kolich-httpclient4-closure</artifactId>
-            <version>0.0.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.2</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>com.novocode</groupId>
