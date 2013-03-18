@@ -5,7 +5,7 @@
     <artifactId>kolich-common</artifactId>
     <packaging>jar</packaging>
     <description>kolich-common</description>
-    <version>0.0.7</version>
+    <version>0.0.7.1</version>
     <name>kolich-common</name>
     <organization>
         <name>com.kolich</name>
