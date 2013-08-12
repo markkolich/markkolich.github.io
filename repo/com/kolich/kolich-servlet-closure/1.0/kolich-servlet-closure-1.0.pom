@@ -5,7 +5,7 @@
     <artifactId>kolich-servlet-closure</artifactId>
     <packaging>jar</packaging>
     <description>kolich-servlet-closure</description>
-    <version>0.1</version>
+    <version>1.0</version>
     <name>kolich-servlet-closure</name>
     <organization>
         <name>com.kolich</name>
