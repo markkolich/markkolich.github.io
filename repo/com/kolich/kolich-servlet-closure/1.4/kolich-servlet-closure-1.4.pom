@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kolich</groupId>
+    <artifactId>kolich-servlet-closure</artifactId>
+    <packaging>jar</packaging>
+    <description>kolich-servlet-closure</description>
+    <version>1.4</version>
+    <name>kolich-servlet-closure</name>
+    <organization>
+        <name>com.kolich</name>
+    </organization>
+    <dependencies>
+        <dependency>
+            <groupId>com.kolich</groupId>
+            <artifactId>kolich-common</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>Kolichrepo</id>
+            <name>Kolich repo</name>
+            <url>http://markkolich.github.com/repo/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>
