@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kolich</groupId>
+    <artifactId>kolich-aws</artifactId>
+    <packaging>jar</packaging>
+    <description>kolich-aws</description>
+    <version>0.2</version>
+    <name>kolich-aws</name>
+    <organization>
+        <name>com.kolich</name>
+    </organization>
+    <dependencies>
+        <dependency>
+            <groupId>com.kolich</groupId>
+            <artifactId>kolich-httpclient4-closure</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>Kolichrepo</id>
+            <name>Kolich repo</name>
+            <url>http://markkolich.github.io/repo/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>
