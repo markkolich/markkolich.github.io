@@ -2,11 +2,11 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kolich</groupId>
-    <artifactId>havalo-client</artifactId>
+    <artifactId>havalo-kvs-client</artifactId>
     <packaging>jar</packaging>
-    <description>havalo-client</description>
-    <version>1.1</version>
-    <name>havalo-client</name>
+    <description>havalo-kvs-client</description>
+    <version>1.4</version>
+    <name>havalo-kvs-client</name>
     <organization>
         <name>com.kolich</name>
     </organization>
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>com.kolich</groupId>
             <artifactId>kolich-httpclient4-closure</artifactId>
-            <version>0.0.8.1</version>
+            <version>2.3</version>
         </dependency>
         <dependency>
             <groupId>com.novocode</groupId>
@@ -33,7 +33,7 @@
         <repository>
             <id>Kolichrepo</id>
             <name>Kolich repo</name>
-            <url>http://markkolich.github.com/repo/</url>
+            <url>http://markkolich.github.io/repo/</url>
             <layout>default</layout>
         </repository>
     </repositories>
