@@ -1,0 +1,194 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>curacao</groupId>
+    <artifactId>curacao-parent</artifactId>
+    <version>4.1.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+
+        <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
+        <maven-clean-plugin.version>2.6.1</maven-clean-plugin.version>
+        <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
+        <maven-source-plugin.version>2.4</maven-source-plugin.version>
+        <maven-assembly-plugin.version>2.5.5</maven-assembly-plugin.version>
+
+        <kolich-common.version>0.5</kolich-common.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <reflections.version>0.9.10</reflections.version>
+
+        <guava.version>19.0</guava.version>
+        <gson.version>2.6.1</gson.version>
+
+        <config.version>1.3.0</config.version>
+        <jsr305.version>2.0.3</jsr305.version>
+        <commons-lang3.version>3.1</commons-lang3.version>
+        <commons-io.version>2.4</commons-io.version>
+        <commons-codec.version>1.10</commons-codec.version>
+        <slf4j-api.version>1.7.21</slf4j-api.version>
+
+        <jackson-core.version>2.7.3</jackson-core.version>
+        <jackson-annotations.version>2.7.3</jackson-annotations.version>
+        <jackson-databind.version>2.7.3</jackson-databind.version>
+
+        <async-http-client.version>2.0.0</async-http-client.version>
+
+        <logback-core.version>1.1.7</logback-core.version>
+        <logback-classic.version>1.1.7</logback-classic.version>
+
+        <jetty-server.version>9.3.8.v20160314</jetty-server.version>
+        <jetty-servlet.version>9.3.8.v20160314</jetty-servlet.version>
+        <jetty-webapp.version>9.3.8.v20160314</jetty-webapp.version>
+
+        <jetty-maven-plugin.version>9.3.6.v20151106</jetty-maven-plugin.version>
+
+        <junit.version>4.12</junit.version>
+        <powermock-api-mockito.version>1.6.4</powermock-api-mockito.version>
+        <powermock-module-junit4.version>1.6.4</powermock-module-junit4.version>
+    </properties>
+
+    <organization>
+        <name>Mark Kolich</name>
+        <url>http://github.com/markkolich/curacao</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>markkolich</id>
+            <name>Mark Kolich</name>
+            <url>http://mark.koli.ch</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>-8</timezone>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>curacao</module>
+
+        <module>curacao-gson</module>
+        <module>curacao-jackson</module>
+
+        <module>curacao-examples</module>
+
+        <module>curacao-embedded</module>
+
+        <module>curacao-junit4runner</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>curacao</groupId>
+                <artifactId>curacao</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>curacao</groupId>
+                <artifactId>curacao-gson</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>curacao</groupId>
+                <artifactId>curacao-jackson</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>curacao</groupId>
+                <artifactId>curacao-examples</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>curacao</groupId>
+                <artifactId>curacao-embedded</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>curacao</groupId>
+                <artifactId>curacao-junit4runner</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!-- Delete the top level dist/ directory on clean. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${maven-clean-plugin.version}</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>dist</directory>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <!-- Copies the resulting POM from the sub-module into the dist/ directory. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven-dependency-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-artifact</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>pom</type>
+                                </artifactItem>
+                            </artifactItems>
+                            <outputDirectory>dist/${project.artifactId}/${project.version}</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>markkolich.github.io</id>
+            <name>markkolich.github.io</name>
+            <url>http://markkolich.github.io/repo</url>
+            <releases />
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>
