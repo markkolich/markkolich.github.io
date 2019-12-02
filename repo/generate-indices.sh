@@ -12,7 +12,7 @@ cd ..
 curl -s $URL -o generate-indices.jar
 
 ## Generate indices!
-java -jar generate-indices.jar markkolich.github.io
+java -jar generate-indices.jar repo
 
 ## Cleanup
 rm -f generate-indices.jar
