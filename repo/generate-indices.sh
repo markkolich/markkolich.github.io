@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="http://markkolich.github.io/downloads/generate-indices/0.3/generate-indices-0.3-one-jar.jar"
+URL="https://mark.koli.ch/downloads/generate-indices/0.3/generate-indices-0.3-one-jar.jar"
 
 ## Check if 'curl' and 'java' exists on the PATH of the running shell.
 command -v curl >/dev/null 2>&1 || { echo >&2 "Sorry, I require curl but it's not on your PATH. Aborting."; exit 1; }
