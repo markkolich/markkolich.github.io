@@ -9,7 +9,7 @@ If you wish to use this repository, you can easily add it to your existing Maven
 ### SBT
 
 ```scala
-resolvers += "Kolich repo" at "http://markkolich.github.io/repo"
+resolvers += "Kolich repo" at "https://markkolich.github.io/repo"
 ```
 
 ### Maven
@@ -18,11 +18,11 @@ resolvers += "Kolich repo" at "http://markkolich.github.io/repo"
 <repository>
   <id>Kolichrepo</id>
   <name>Kolich repo</name>
-  <url>http://markkolich.github.io/repo/</url>
+  <url>https://markkolich.github.io/repo/</url>
   <layout>default</layout>
 </repository>
 ```
 
 ### Raw
 
-You can browse the contents of the repository, and download any artifact you'd like at <a href="http://markkolich.github.io/repo">http://markkolich.github.io/repo</a>.
+You can browse the contents of the repository, and download any artifact you'd like at <a href="https://markkolich.github.io/repo">https://markkolich.github.io/repo</a>.
